@@ -1,0 +1,11 @@
+public :
+A class member that has been declared public is available to everything that is able to access the class and can modify the pubilcally declared variables ,can be used where we are not conceren who is accessing or modifying which data inside class.
+
+private:
+A class member that has been declared private is only accessible from within that class and can be accessed only by the class member functions ,can be used where we are fully cautious about giving access to our data.
+
+privilige:
+A priviliged member can access private variables and functions inside class and can be used where we only want to give only read but not modify or write access to calling object.
+
+static:
+Created once and can be accessed by all objects and can be used when we want to give changed values to all the object ,as when we will change the static scoped variable all the object accessing that variable will get the updated value.  

@@ -1,0 +1,1 @@
+select d1.Mgr_ssn, d1.Dnumber, d1.Dname, (select count(*) FROM DEPENDENT d2 where d2.essn = d1.Mgr_ssn) from DEPARTMENT d1 where d1.Dnumber IN (select dl.Dnumber from DEPT_LOCATIONS dl group by dl.Dnumber having count(*) >= 2);

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>2022201032</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body font-family: Arial, Helvetica, sans-serif; id="grad1">
+        <h1 align="center">STUDENTS RECORDS</h1>
+
+        <label >ENTER NAME :</label>
+          <input type="text" id="name">
+          <br>
+          <br>  
+          <label>ENTER ROLL N0 : </label>
+          <input type="text"  id="roll">
+          </label>
+          <br>
+          <br>
+          <br>
+          <br>
+        <table id="myTable" border="2px">
+            <tr>
+              <th>Student Name</th>
+              <th>Roll No.</th>
+            </tr>
+            <tr>
+          </table>
+          <br>
+          <br>
+          <div2>
+            <button onclick="myCreateFunction()" class="button button2" >Add New</button>
+          </div2>
+          <div2>
+            <button onclick="myDeleteFunction()" class="button button3">Delete Last Record</button>
+          </div2>
+
+          <script>
+            function myCreateFunction() {
+              var table = document.getElementById("myTable");
+              var row = table.insertRow(1);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var name = document.getElementById("name").value;
+              var roll = document.getElementById("roll").value;
+              cell1.innerHTML =name;
+              cell2.innerHTML =roll;
+            }
+            
+            function myDeleteFunction() {
+              document.getElementById("myTable").deleteRow(-1);
+            }
+            </script>
+    </body>
+</html>
